@@ -5,5 +5,10 @@
   <%= @scheduled_job.name %>
 </p>
 
+<p>
+  <strong>Timestamp:</strong>
+  <%= l(@scheduled_job.created_at, format: :long) %>
+</p>
+
 <%= link_to 'Edit', edit_scheduled_job_path(@scheduled_job) %> |
 <%= link_to 'Back', scheduled_jobs_path %>

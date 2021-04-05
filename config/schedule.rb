@@ -18,3 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+set :output, "~/tmp/log/cronjobs.log"
+
+every :minute do
+  runner "ScheduledJob.create_from_schedule"
+end
